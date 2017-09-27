@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ofer.s</groupId>
+    <artifactId>SoapRequestGenerator</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+
+    <dependencies>
+
+
+       <!-- <dependency>
+            <groupId>com.smartbear.soapui</groupId>
+            <artifactId>soapui-maven-plugin</artifactId>
+            <version>5.1.0</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.smartbear.soapui</groupId>
+            <artifactId>soapui</artifactId>
+            <version>5.1.0</version>
+
+            <exclusions>
+
+                <!-- These are mainly GUI artifacts not needed in the headless test runner-->
+                <!-- TODO We might also want to remove: fife:rsyntaxtextarea.
+                          It's included in prior versions (< 4.5.2) though -->
+
+                <!-- JGoodies -->
+
+                <exclusion>
+                    <groupId>com.jgoodies</groupId>
+                    <artifactId>forms</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.jgoodies</groupId>
+                    <artifactId>looks</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.jgoodies</groupId>
+                    <artifactId>binding</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>smartbear-sweden-plugin-repository</id>
+            <url>http://www.soapui.org/repository/maven2/</url>
+        </repository>
+    </repositories>
+
+
+
+
+
+</project>
